@@ -1,0 +1,14 @@
+services:
+  nanokvm-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nanokvm-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./NanoKVM-USB.zip:/app/NanoKVM-USB.zip
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+
