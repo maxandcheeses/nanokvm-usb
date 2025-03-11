@@ -10,5 +10,6 @@ services:
       - ./NanoKVM-USB.zip:/app/NanoKVM-USB.zip
     environment:
       - NODE_ENV=production
+      - NO_AUDIO=true
     restart: unless-stopped
 
