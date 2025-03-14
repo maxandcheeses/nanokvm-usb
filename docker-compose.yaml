@@ -12,4 +12,9 @@ services:
       - NODE_ENV=production
       - NO_AUDIO=true
     restart: unless-stopped
+    networks:
+      - nanokvm-usb-network
 
+networks:
+  nanokvm-usb-network:
+    driver: bridge
